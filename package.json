@@ -2,7 +2,7 @@
   "name": "multi-cursor",
   "main": "./lib/multi-cursor",
   "version": "0.0.0",
-  "description": "Atom package to expand cursor for multiple editing",
+  "description": "Atom package to expand your current cursor.",
   "activationCommands": {
     "atom-workspace": [
       "multi-cursor:expandDown",
