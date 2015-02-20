@@ -8,5 +8,5 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
 'atom-workspace':
-  'ctrl-cmd-alt-down': 'multi-cursor:expandDown'
-  'ctrl-cmd-alt-up': 'multi-cursor:expandUp'
+  'alt-shift-cmd-down': 'multi-cursor:expandDown'
+  'alt-shift-cmd-up': 'multi-cursor:expandUp'
