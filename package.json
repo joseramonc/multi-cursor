@@ -1,0 +1,19 @@
+{
+  "name": "multi-cursor",
+  "main": "./lib/multi-cursor",
+  "version": "0.0.0",
+  "description": "Atom package to expand cursor for multiple editing",
+  "activationCommands": {
+    "atom-workspace": [
+      "multi-cursor:expandDown",
+      "multi-cursor:expandUp"
+    ]
+  },
+  "repository": "https://github.com/joseramonc/multi-cursor",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

@@ -1,0 +1,22 @@
+# See https://atom.io/docs/latest/creating-a-package#menus for more details
+'context-menu':
+  'atom-text-editor': [
+    {
+      'label': 'Toggle multi-cursor'
+      'command': 'multi-cursor:toggle'
+    }
+  ]
+'menu': [
+  {
+    'label': 'Packages'
+    'submenu': [
+      'label': 'multi-cursor'
+      'submenu': [
+        {
+          'label': 'Toggle'
+          'command': 'multi-cursor:toggle'
+        }
+      ]
+    ]
+  }
+]
