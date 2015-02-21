@@ -6,8 +6,8 @@ An atom package to easily create more cursors with kestrokes.
 
 Default keymaps are:
 
-    alt-shift-cmd-up
-    alt-shift-cmd-down
+* <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>cmd</kbd> + <kbd>up</kbd>
+* <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>cmd</kbd> + <kbd>down</kbd>
 
 Those create cursors above and under respectively and may be overriden for your favorite keystroke in your `keymap.cson`
 
