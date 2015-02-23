@@ -1,4 +1,5 @@
 MultiCursor = require '../lib/multi-cursor'
+{WorkspaceView} = require 'atom'
 
 # Use the command `window:run-package-specs` (cmd-alt-ctrl-p) to run specs.
 #
@@ -6,57 +7,22 @@ MultiCursor = require '../lib/multi-cursor'
 # or `fdescribe`). Remove the `f` to unfocus the block.
 
 describe "MultiCursor", ->
-  [workspaceElement, activationPromise] = []
+  [workspaceElement, view, activationPromise] = []
 
   beforeEach ->
     workspaceElement = atom.views.getView(atom.workspace)
+    view = atom.workspace.openSync('spec/files/test.txt')
+    view.setCursorBufferPosition([0,0])
     activationPromise = atom.packages.activatePackage('multi-cursor')
 
-  describe "when the multi-cursor:toggle event is triggered", ->
-    it "hides and shows the modal panel", ->
-      # Before the activation event the view is not on the DOM, and no panel
-      # has been created
-      expect(workspaceElement.querySelector('.multi-cursor')).not.toExist()
-
-      # This is an activation event, triggering it will cause the package to be
-      # activated.
-      atom.commands.dispatch workspaceElement, 'multi-cursor:toggle'
-
-      waitsForPromise ->
-        activationPromise
-
-      runs ->
-        expect(workspaceElement.querySelector('.multi-cursor')).toExist()
-
-        multiCursorElement = workspaceElement.querySelector('.multi-cursor')
-        expect(multiCursorElement).toExist()
-
-        multiCursorPanel = atom.workspace.panelForItem(multiCursorElement)
-        expect(multiCursorPanel.isVisible()).toBe true
-        atom.commands.dispatch workspaceElement, 'multi-cursor:toggle'
-        expect(multiCursorPanel.isVisible()).toBe false
-
-    it "hides and shows the view", ->
-      # This test shows you an integration test testing at the view level.
-
-      # Attaching the workspaceElement to the DOM is required to allow the
-      # `toBeVisible()` matchers to work. Anything testing visibility or focus
-      # requires that the workspaceElement is on the DOM. Tests that attach the
-      # workspaceElement to the DOM are generally slower than those off DOM.
+  describe "when the multi-cursor:expandDown event is triggered", ->
+    it "When there's 1 cursor and down command is activated", ->
       jasmine.attachToDOM(workspaceElement)
 
-      expect(workspaceElement.querySelector('.multi-cursor')).not.toExist()
-
-      # This is an activation event, triggering it causes the package to be
-      # activated.
-      atom.commands.dispatch workspaceElement, 'multi-cursor:toggle'
-
       waitsForPromise ->
         activationPromise
 
       runs ->
-        # Now we can test for view visibility
-        multiCursorElement = workspaceElement.querySelector('.multi-cursor')
-        expect(multiCursorElement).toBeVisible()
-        atom.commands.dispatch workspaceElement, 'multi-cursor:toggle'
-        expect(multiCursorElement).not.toBeVisible()
+        expect(view.getCursors().length).toBe(1)
+        atom.commands.dispatch workspaceElement, 'multi-cursor:expandDown'
+        expect(view.getCursors().length).toBe(2)
