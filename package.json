@@ -6,7 +6,9 @@
   "activationCommands": {
     "atom-workspace": [
       "multi-cursor:expandDown",
-      "multi-cursor:expandUp"
+      "multi-cursor:expandUp",
+      "multi-cursor:skipDown",
+      "multi-cursor:skipUp"
     ]
   },
   "repository": "https://github.com/joseramonc/multi-cursor",

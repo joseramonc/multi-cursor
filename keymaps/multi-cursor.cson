@@ -9,4 +9,6 @@
 # https://atom.io/docs/latest/advanced/keymaps
 'atom-workspace':
   'alt-shift-cmd-down': 'multi-cursor:expandDown'
+  'alt-shift-cmd-right': 'multi-cursor:skipDown'
+  'alt-shift-cmd-left': 'multi-cursor:skipUp'
   'alt-shift-cmd-up': 'multi-cursor:expandUp'
