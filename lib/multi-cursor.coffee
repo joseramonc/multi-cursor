@@ -53,8 +53,10 @@ module.exports = MultiCursor =
     @updateBuffer()
     @currentPosition = new Point(@currentPosition.row + 1, @currentPosition.column)
     @editor.addCursorAtBufferPosition(@currentPosition)
+    @editor.scrollToCursorPosition()
 
   expandUp: ->
     @updateBuffer()
     @currentPosition = new Point(@currentPosition.row - 1, @currentPosition.column)
     @editor.addCursorAtBufferPosition(@currentPosition)
+    @editor.scrollToCursorPosition()
