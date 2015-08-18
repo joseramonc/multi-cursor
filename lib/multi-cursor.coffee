@@ -17,6 +17,11 @@ module.exports = MultiCursor =
     @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:skipDown': => @skipDown()
     @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:skipUp': => @skipUp()
 
+    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:move-last-cursor-up': => @moveLastCursorUp()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:move-last-cursor-down': => @moveLastCursorDown()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:move-last-cursor-left': => @moveLastCursorLeft()
+    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:move-last-cursor-right': => @moveLastCursorRight()
+
   deactivate: ->
     @subscriptions.dispose()
     @currentPosition = null
@@ -60,3 +65,23 @@ module.exports = MultiCursor =
     @currentPosition = new Point(@currentPosition.row - 1, @currentPosition.column)
     @editor.addCursorAtBufferPosition(@currentPosition)
     @editor.scrollToBufferPosition(@currentPosition)
+
+  moveLastCursorUp: ->
+    editor = atom.workspace.getActiveTextEditor();
+    editor.getLastCursor().moveUp()
+    editor.mergeCursors()
+
+  moveLastCursorDown: ->
+    editor = atom.workspace.getActiveTextEditor();
+    editor.getLastCursor().moveDown()
+    editor.mergeCursors()
+
+  moveLastCursorLeft: ->
+    editor = atom.workspace.getActiveTextEditor();
+    editor.getLastCursor().moveLeft()
+    editor.mergeCursors()
+
+  moveLastCursorRight: ->
+    editor = atom.workspace.getActiveTextEditor();
+    editor.getLastCursor().moveRight()
+    editor.mergeCursors()
