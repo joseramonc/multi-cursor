@@ -67,21 +67,21 @@ module.exports = MultiCursor =
     @editor.scrollToBufferPosition(@currentPosition)
 
   moveLastCursorUp: ->
-    editor = atom.workspace.getActiveTextEditor();
-    editor.getLastCursor().moveUp()
+    return unless editor = atom.workspace.getActiveTextEditor()
+    editor.getLastCursor()?.moveUp()
     editor.mergeCursors()
 
   moveLastCursorDown: ->
-    editor = atom.workspace.getActiveTextEditor();
-    editor.getLastCursor().moveDown()
+    return unless editor = atom.workspace.getActiveTextEditor()
+    editor.getLastCursor()?.moveDown()
     editor.mergeCursors()
 
   moveLastCursorLeft: ->
-    editor = atom.workspace.getActiveTextEditor();
-    editor.getLastCursor().moveLeft()
+    return unless editor = atom.workspace.getActiveTextEditor()
+    editor.getLastCursor()?.moveLeft()
     editor.mergeCursors()
 
   moveLastCursorRight: ->
-    editor = atom.workspace.getActiveTextEditor();
-    editor.getLastCursor().moveRight()
+    return unless editor = atom.workspace.getActiveTextEditor()
+    editor.getLastCursor()?.moveRight()
     editor.mergeCursors()
