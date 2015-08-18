@@ -12,15 +12,15 @@ module.exports = MultiCursor =
     # Events subscribed to in atom's system can be easily cleaned up with a CompositeDisposable
     @subscriptions = new CompositeDisposable
 
-    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:expandDown': => @expandDown()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:expandUp': => @expandUp()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:skipDown': => @skipDown()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:skipUp': => @skipUp()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:expandDown': => @expandDown()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:expandUp': => @expandUp()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:skipDown': => @skipDown()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:skipUp': => @skipUp()
 
-    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:move-last-cursor-up': => @moveLastCursorUp()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:move-last-cursor-down': => @moveLastCursorDown()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:move-last-cursor-left': => @moveLastCursorLeft()
-    @subscriptions.add atom.commands.add 'atom-workspace', 'multi-cursor:move-last-cursor-right': => @moveLastCursorRight()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:move-last-cursor-up': => @moveLastCursorUp()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:move-last-cursor-down': => @moveLastCursorDown()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:move-last-cursor-left': => @moveLastCursorLeft()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:move-last-cursor-right': => @moveLastCursorRight()
 
   deactivate: ->
     @subscriptions.dispose()
