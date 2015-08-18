@@ -47,17 +47,16 @@ module.exports = MultiCursor =
   expandInDirection: (dir) ->
     return unless editor = atom.workspace.getActiveTextEditor()
     return unless lastCursor = editor.getLastCursor()
-
+    cursors = editor.getCursors()
     coords = lastCursor.getBufferPosition()
 
     newCoords = { column: lastCursor.goalColumn || coords.column, row: coords.row + dir + @skipCount }
-
     return if newCoords.row < 0 or newCoords.row > editor.getLastBufferRow()
 
     newCursor = editor.addCursorAtBufferPosition(newCoords)
     newCursor.goalColumn = lastCursor.goalColumn || coords.column
 
-    if newCursor is lastCursor
+    if cursors.length is editor.getCursors().length
       # no cursor was added so we tried to add a cursor where there is one already
       lastCursor.destroy() if editor.hasMultipleCursors()
 
