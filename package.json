@@ -8,7 +8,11 @@
       "multi-cursor:expandDown",
       "multi-cursor:expandUp",
       "multi-cursor:skipDown",
-      "multi-cursor:skipUp"
+      "multi-cursor:skipUp",
+      "multi-cursor:move-last-cursor-up",
+      "multi-cursor:move-last-cursor-down",
+      "multi-cursor:move-last-cursor-left",
+      "multi-cursor:move-last-cursor-right"
     ]
   },
   "repository": "https://github.com/joseramonc/multi-cursor",
