@@ -7,12 +7,14 @@
 
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
-'atom-text-editor':
-  'alt-shift-cmd-down': 'multi-cursor:expandDown'
-  'alt-shift-cmd-right': 'multi-cursor:skipDown'
-  'alt-shift-cmd-left': 'multi-cursor:skipUp'
-  'alt-shift-cmd-up': 'multi-cursor:expandUp'
-  'alt-ctrl-shift-cmd-down': 'multi-cursor:move-last-cursor-down'
-  'alt-ctrl-shift-cmd-right': 'multi-cursor:move-last-cursor-right'
-  'alt-ctrl-shift-cmd-left': 'multi-cursor:move-last-cursor-left'
-  'alt-ctrl-shift-cmd-up': 'multi-cursor:move-last-cursor-up'
+'atom-text-editor:not(mini)':
+
+  # Expand current cursor
+  'ctrl-down': 'multi-cursor:expandDown'
+  'ctrl-up':   'multi-cursor:expandUp'
+
+  # Move the last cursor.
+  'ctrl-alt-down':  'multi-cursor:move-last-cursor-down'
+  'ctrl-alt-right': 'multi-cursor:move-last-cursor-right'
+  'ctrl-alt-left':  'multi-cursor:move-last-cursor-left'
+  'ctrl-alt-up':    'multi-cursor:move-last-cursor-up'
