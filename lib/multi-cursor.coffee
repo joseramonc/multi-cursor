@@ -65,23 +65,39 @@ module.exports = MultiCursor =
   moveLastCursorUp: ->
     @skipCount = 0
     return unless editor = atom.workspace.getActiveTextEditor()
-    editor.getLastCursor()?.moveUp()
+    return unless cursor = editor.getLastCursor()
+    if cursor.selection.isEmpty()
+      cursor.moveUp()
+    else
+      cursor.selection.modifySelection -> cursor.moveUp()
     editor.mergeCursors()
 
   moveLastCursorDown: ->
     @skipCount = 0
     return unless editor = atom.workspace.getActiveTextEditor()
-    editor.getLastCursor()?.moveDown()
+    return unless cursor = editor.getLastCursor()
+    if cursor.selection.isEmpty()
+      cursor.moveDown()
+    else
+      cursor.selection.modifySelection -> cursor.moveDown()
     editor.mergeCursors()
 
   moveLastCursorLeft: ->
     @skipCount = 0
     return unless editor = atom.workspace.getActiveTextEditor()
-    editor.getLastCursor()?.moveLeft()
+    return unless cursor = editor.getLastCursor()
+    if cursor.selection.isEmpty()
+      cursor.moveLeft()
+    else
+      cursor.selection.modifySelection -> cursor.moveLeft()
     editor.mergeCursors()
 
   moveLastCursorRight: ->
     @skipCount = 0
     return unless editor = atom.workspace.getActiveTextEditor()
-    editor.getLastCursor()?.moveRight()
+    return unless cursor = editor.getLastCursor()
+    if cursor.selection.isEmpty()
+      cursor.moveRight()
+    else
+      cursor.selection.modifySelection -> cursor.moveRight()
     editor.mergeCursors()
