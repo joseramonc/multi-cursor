@@ -15,8 +15,6 @@ module.exports = MultiCursor =
 
     @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:expandDown': => @expandDown()
     @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:expandUp': => @expandUp()
-    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:skipDown': => @skipDown()
-    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:skipUp': => @skipUp()
 
     @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:move-last-cursor-up': => @moveLastCursorUp()
     @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:move-last-cursor-down': => @moveLastCursorDown()
@@ -31,12 +29,6 @@ module.exports = MultiCursor =
 
   serialize: ->
     @currentPosition = null
-
-  skipDown: ->
-    @skipCount++
-
-  skipUp: ->
-    @skipCount--
 
   expandDown: ->
     @expandInDirection(1)
