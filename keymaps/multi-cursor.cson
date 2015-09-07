@@ -8,6 +8,7 @@
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
 
+
 # OSX keymaps are different of atom's default
 # because ctrl-shift up and down are OS shortcuts for
 # mission control and application windows by default.
@@ -36,6 +37,7 @@
   'ctrl-shift-alt-down':  'multi-cursor:move-last-cursor-down'
   'ctrl-shift-alt-right': 'multi-cursor:move-last-cursor-right'
   'ctrl-shift-alt-left':  'multi-cursor:move-last-cursor-left'
+  'ctrl-shift-alt-up':    'multi-cursor:move-last-cursor-up'
 
 
 
@@ -50,7 +52,4 @@
   'ctrl-shift-alt-down':  'multi-cursor:move-last-cursor-down'
   'ctrl-shift-alt-right': 'multi-cursor:move-last-cursor-right'
   'ctrl-shift-alt-left':  'multi-cursor:move-last-cursor-left'
-  'ctrl-shift-alt-up':    'multi-cursor:move-last-cursor-up'
-
-
   'ctrl-shift-alt-up':    'multi-cursor:move-last-cursor-up'
