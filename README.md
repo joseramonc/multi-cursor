@@ -6,8 +6,8 @@ An atom package to easily create more cursors with keystrokes.
 
 ## OSX Keymaps:
 * **Creating cursors**
-  * <kbd>ctrl</kbd> + <kbd>up</kbd> = Create cursor above
-  * <kbd>ctrl</kbd> + <kbd>down</kbd> = Create cursor under
+  * <kbd>alt</kbd> + <kbd>up</kbd> = Create cursor above
+  * <kbd>alt</kbd> + <kbd>down</kbd> = Create cursor under
 * **Moving the last cursor that has been created**
   * <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>up</kbd> = Move the last-created cursor up
   * <kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>down</kbd> = Move the last-created cursor down
