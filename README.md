@@ -40,7 +40,7 @@ An atom package to easily create more cursors with keystrokes.
 Those may be overriden for your favorite keystroke in your `keymap.cson` with:
 
 ```
-atom-text-editor:not(mini)':
+'atom-workspace atom-text-editor:not([mini])':
   # you may have to unset the keybinding if it's alredy in use.
 
   # Expand current cursor
