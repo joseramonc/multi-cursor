@@ -41,7 +41,7 @@ Those may be overriden for your favorite keystroke in your `keymap.cson` with:
 
 ```
 'atom-workspace atom-text-editor:not([mini])':
-  # you may have to unset the keybinding if it's alredy in use.
+  # you may have to unset the keybinding if it's already in use.
 
   # Expand current cursor
   'ctrl-down': 'multi-cursor:expandDown'
