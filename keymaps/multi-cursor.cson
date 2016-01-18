@@ -45,8 +45,8 @@
 '.platform-win32 atom-text-editor:not(mini)':
 
   # Expand current cursor
-  'ctrl-alt-down': 'multi-cursor:expandDown'
-  'ctrl-alt-up':   'multi-cursor:expandUp'
+  'alt-down': 'multi-cursor:expandDown'
+  'alt-up':   'multi-cursor:expandUp'
 
   # Move the last cursor.
   'ctrl-shift-alt-down':  'multi-cursor:move-last-cursor-down'
