@@ -30,8 +30,8 @@
 '.platform-linux atom-text-editor:not(mini)':
 
   # Expand current cursor
-  'alt-shift-down': 'multi-cursor:expandDown'
-  'alt-shift-up':   'multi-cursor:expandUp'
+  'ctrl-shift-down': 'multi-cursor:expandDown'
+  'ctrl-shift-up':   'multi-cursor:expandUp'
 
   # Move the last cursor.
   'ctrl-shift-alt-down':  'multi-cursor:move-last-cursor-down'
