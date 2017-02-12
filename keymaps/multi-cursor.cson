@@ -12,7 +12,7 @@
 # OSX keymaps are different of atom's default
 # because ctrl-shift up and down are OS shortcuts for
 # mission control and application windows by default.
-'.platform-darwin atom-text-editor:not(mini)':
+'.platform-darwin atom-text-editor:not([mini])':
 
   # Expand current cursor
   'alt-down': 'multi-cursor:expandDown'
