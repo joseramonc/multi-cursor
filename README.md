@@ -43,9 +43,11 @@ Those may be overriden for your favorite keystroke in your `keymap.cson` with:
 'atom-workspace atom-text-editor:not([mini])':
   # you may have to unset the keybinding if it's already in use.
 
-  # Expand current cursor
+  # Expand last cursor
   'ctrl-down': 'multi-cursor:expandDown'
   'ctrl-up':   'multi-cursor:expandUp'
+  'ctrl-cmd-down': 'multi-cursor:expand-all-down'
+  'ctrl-cmd-up':   'multi-cursor:expand-all-up'
 
   # Move the last cursor.
   'ctrl-alt-down':  'multi-cursor:move-last-cursor-down'

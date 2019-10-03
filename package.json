@@ -7,6 +7,8 @@
     "atom-workspace": [
       "multi-cursor:expandDown",
       "multi-cursor:expandUp",
+      "multi-cursor:expandAllUp",
+      "multi-cursor:expandAllDown",
       "multi-cursor:skipDown",
       "multi-cursor:skipUp",
       "multi-cursor:move-last-cursor-up",

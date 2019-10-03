@@ -15,6 +15,8 @@ module.exports = MultiCursor =
 
     @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:expandDown': => @expandDown()
     @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:expandUp': => @expandUp()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:expand-all-up': => @expandAllUp()
+    @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:expand-all-down': => @expandAllDown()
 
     @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:move-last-cursor-up': => @moveLastCursorUp()
     @subscriptions.add atom.commands.add 'atom-text-editor', 'multi-cursor:move-last-cursor-down': => @moveLastCursorDown()
@@ -35,6 +37,24 @@ module.exports = MultiCursor =
 
   expandUp: ->
     @expandInDirection(-1)
+
+  expandAllUp: ->
+    return unless editor = atom.workspace.getActiveTextEditor()
+    return unless lastCursor = editor.getLastCursor()
+    cursors = editor.getCursors()
+    coords = lastCursor.getBufferPosition()
+
+    for line in [1..coords.row]
+      @expandUp()
+
+  expandAllDown: ->
+    return unless editor = atom.workspace.getActiveTextEditor()
+    return unless lastCursor = editor.getLastCursor()
+    cursors = editor.getCursors()
+    coords = lastCursor.getBufferPosition()
+
+    for line in [coords.row..editor.getLineCount()]
+      @expandDown()
 
   expandInDirection: (dir) ->
     return unless editor = atom.workspace.getActiveTextEditor()
