@@ -1,16 +1,14 @@
 {
   "name": "multi-cursor",
   "main": "./lib/multi-cursor",
-  "version": "2.1.5",
+  "version": "3.0.0",
   "description": "Atom package to expand your current cursor.",
   "activationCommands": {
     "atom-workspace": [
       "multi-cursor:expand-down",
       "multi-cursor:expand-up",
-
       "multi-cursor:expand-all-up",
       "multi-cursor:expand-all-down",
-
       "multi-cursor:move-last-cursor-up",
       "multi-cursor:move-last-cursor-down",
       "multi-cursor:move-last-cursor-left",
