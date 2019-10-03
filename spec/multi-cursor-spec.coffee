@@ -15,7 +15,7 @@ describe "MultiCursor", ->
     view.setCursorBufferPosition([0,0])
     activationPromise = atom.packages.activatePackage('multi-cursor')
 
-  describe "when the multi-cursor:expandDown event is triggered", ->
+  describe "when the multi-cursor:expand-down event is triggered", ->
     it "When there's 1 cursor and down command is activated", ->
       jasmine.attachToDOM(workspaceElement)
 
@@ -24,5 +24,5 @@ describe "MultiCursor", ->
 
       runs ->
         expect(view.getCursors().length).toBe(1)
-        atom.commands.dispatch workspaceElement, 'multi-cursor:expandDown'
+        atom.commands.dispatch workspaceElement, 'multi-cursor:expand-down'
         expect(view.getCursors().length).toBe(2)
