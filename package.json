@@ -5,12 +5,12 @@
   "description": "Atom package to expand your current cursor.",
   "activationCommands": {
     "atom-workspace": [
-      "multi-cursor:expandDown",
-      "multi-cursor:expandUp",
-      "multi-cursor:expandAllUp",
-      "multi-cursor:expandAllDown",
-      "multi-cursor:skipDown",
-      "multi-cursor:skipUp",
+      "multi-cursor:expand-down",
+      "multi-cursor:expand-up",
+
+      "multi-cursor:expand-all-up",
+      "multi-cursor:expand-all-down",
+
       "multi-cursor:move-last-cursor-up",
       "multi-cursor:move-last-cursor-down",
       "multi-cursor:move-last-cursor-left",

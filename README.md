@@ -44,8 +44,10 @@ Those may be overriden for your favorite keystroke in your `keymap.cson` with:
   # you may have to unset the keybinding if it's already in use.
 
   # Expand last cursor
-  'ctrl-down': 'multi-cursor:expandDown'
-  'ctrl-up':   'multi-cursor:expandUp'
+  'ctrl-down': 'multi-cursor:expand-down'
+  'ctrl-up':   'multi-cursor:expand-up'
+
+  # Expand all Cursors
   'ctrl-cmd-down': 'multi-cursor:expand-all-down'
   'ctrl-cmd-up':   'multi-cursor:expand-all-up'
 

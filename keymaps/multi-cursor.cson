@@ -2,9 +2,6 @@
 # matched against the focused element, the keystroke and the command to
 # execute.
 #
-# Below is a basic keybinding which registers on all platforms by applying to
-# the root workspace element.
-
 # For more detailed documentation see
 # https://atom.io/docs/latest/advanced/keymaps
 
@@ -15,8 +12,8 @@
 '.platform-darwin atom-text-editor:not(mini)':
 
   # Expand current cursor
-  'alt-down': 'multi-cursor:expandDown'
-  'alt-up':   'multi-cursor:expandUp'
+  'alt-down': 'multi-cursor:expand-down'
+  'alt-up':   'multi-cursor:expand-up'
 
   # Move the last cursor.
   'ctrl-alt-down':  'multi-cursor:move-last-cursor-down'
@@ -30,8 +27,8 @@
 '.platform-linux atom-text-editor:not(mini)':
 
   # Expand current cursor
-  'ctrl-shift-down': 'multi-cursor:expandDown'
-  'ctrl-shift-up':   'multi-cursor:expandUp'
+  'ctrl-shift-down': 'multi-cursor:expand-down'
+  'ctrl-shift-up':   'multi-cursor:expand-up'
 
   # Move the last cursor.
   'ctrl-shift-alt-down':  'multi-cursor:move-last-cursor-down'
@@ -45,8 +42,8 @@
 '.platform-win32 atom-text-editor:not(mini)':
 
   # Expand current cursor
-  'alt-down': 'multi-cursor:expandDown'
-  'alt-up':   'multi-cursor:expandUp'
+  'alt-down': 'multi-cursor:expand-down'
+  'alt-up':   'multi-cursor:expand-up'
 
   # Move the last cursor.
   'ctrl-shift-alt-down':  'multi-cursor:move-last-cursor-down'
