@@ -2,7 +2,7 @@
 
 An atom package to easily create more cursors with keystrokes.
 
-#### Expand cursor up/down
+#### Expand last cursor up/down
 ![Multi-cursor demo](https://s3.amazonaws.com/f.cl.ly/items/2X393M1u1G0K0Z061O00/multi-cursor.gif)
 
 #### Expand all cursors up/down
@@ -54,7 +54,7 @@ The default keymaps may be overriden for your favorite keystroke in your `keymap
   # Warning:
   # You may have to unset the keybinding if it's already in use.
 
-  # Expand all Cursors
+  # Expand all cursors
   'ctrl-cmd-down': 'multi-cursor:expand-all-down'
   'ctrl-cmd-up':   'multi-cursor:expand-all-up'
 
@@ -62,7 +62,7 @@ The default keymaps may be overriden for your favorite keystroke in your `keymap
   'ctrl-down': 'multi-cursor:expand-down'
   'ctrl-up':   'multi-cursor:expand-up'
 
-  # Move the last cursor.
+  # Move the last cursor
   'ctrl-alt-down':  'multi-cursor:move-last-cursor-down'
   'ctrl-alt-right': 'multi-cursor:move-last-cursor-right'
   'ctrl-alt-left':  'multi-cursor:move-last-cursor-left'
