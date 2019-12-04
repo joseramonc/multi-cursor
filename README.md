@@ -2,7 +2,11 @@
 
 An atom package to easily create more cursors with keystrokes.
 
+#### Expand cursor up/down
 ![Multi-cursor demo](https://s3.amazonaws.com/f.cl.ly/items/2X393M1u1G0K0Z061O00/multi-cursor.gif)
+
+#### Expand all cursors up/down
+![Multi-cursor expandAll](https://p16.f3.n0.cdn.getcloudapp.com/items/8Luw4jBr/expand-all-up.gif?v=9096d51e0cc344c4c5e93bbd983f75df)
 
 ## OSX Keymaps:
 * **Creating cursors**
@@ -47,15 +51,16 @@ The default keymaps may be overriden for your favorite keystroke in your `keymap
 
 ```
 'atom-workspace atom-text-editor:not([mini])':
-  # you may have to unset the keybinding if it's already in use.
-
-  # Expand last cursor
-  'ctrl-down': 'multi-cursor:expand-down'
-  'ctrl-up':   'multi-cursor:expand-up'
+  # Warning:
+  # You may have to unset the keybinding if it's already in use.
 
   # Expand all Cursors
   'ctrl-cmd-down': 'multi-cursor:expand-all-down'
   'ctrl-cmd-up':   'multi-cursor:expand-all-up'
+
+  # Expand last cursor
+  'ctrl-down': 'multi-cursor:expand-down'
+  'ctrl-up':   'multi-cursor:expand-up'
 
   # Move the last cursor.
   'ctrl-alt-down':  'multi-cursor:move-last-cursor-down'
